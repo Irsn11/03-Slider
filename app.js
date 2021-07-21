@@ -15,8 +15,17 @@ upBtn.addEventListener('click', () => {
 });
 
 downBtn.addEventListener('click', () => {
-	console.log('downBtn: ', downBtn);
 	changeSlide('down');
+});
+//обработка нажатия стрелок на клавиатуре
+document.addEventListener('keydown', e => {
+	if (e.key==='ArrowUp') {
+	changeSlide('up');
+	} else 
+		if (e.key==='ArrowDown') {
+	changeSlide('up');
+	}
+	
 });
 
 function changeSlide(direction) {
@@ -38,7 +47,7 @@ function changeSlide(direction) {
 	}
 	//получаем высоту контейнера = высота экрана
 	const height = container.clientHeight;
-	console.log('height: ', height);
+	
 
 	//добавляем стили
 
